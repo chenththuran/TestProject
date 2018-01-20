@@ -20,3 +20,9 @@ Feature: customer login from header
 | Password               | Password1           |
 | Birthdate              | 01                  |
 Then the user registration should be successful
+
+
+Scenario: Successful login
+   Given I am on a new user registration page
+	 When I enter valid credential on the page
+	 Then I can login successfully
