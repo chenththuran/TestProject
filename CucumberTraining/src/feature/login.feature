@@ -20,3 +20,7 @@ Feature: customer login from header
 | Password               | Password1           |
 | Birthdate              | 01                  |
 Then the user registration should be successful
+
+Given I am on a new user registration page
+When I enter invalid details
+Then System displays validation error messages
