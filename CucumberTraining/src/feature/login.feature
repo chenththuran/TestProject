@@ -21,6 +21,14 @@ Feature: customer login from header
 | Birthdate              | 01                  |
 Then the user registration should be successful
 
+
 Given I am on a new user registration page
 When I enter invalid details
 Then System displays validation error messages
+
+
+Scenario: Successful login
+   Given I am on a new user registration page
+	 When I enter valid credential on the page
+	 Then I can login successfully
+
